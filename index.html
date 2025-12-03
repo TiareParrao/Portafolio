@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #0a1b45, #9b62ff);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Fondo animado de burbujas */
+        .burbujas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .burbuja {
+            position: absolute;
+            bottom: -150px;
+            background: rgba(255, 255, 255, 0.40);
+            border-radius: 50%;
+            animation: subir 8s linear infinite;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) scale(0.6);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-120vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Sección superior */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 10px 0 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+
+        .cualidades {
+            margin: 40px auto;
+            width: 70%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(3px);
+        }
+
+        .lista-cualidades {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .lista-cualidades span {
+            background-color: rgba(255, 255, 255, 0.25);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin: 6px;
+            border: 2px solid white;
+        }
+
+        /* Sección de proyectos */
+        .proyectos {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .btn-proyecto {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-proyecto:hover {
+            background-color: white;
+            color: #0a1b45;
+        }
+
+        /* Sección final */
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .btn-cv {
+            background-color: white;
+            color: #0a1b45;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .contacto {
+            margin-top: 25px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fondo de burbujas -->
+    <div class="burbujas">
+        <span class="burbuja" style="left: 10%; width: 40px; height: 40px; animation-duration: 10s;"></span>
+        <span class="burbuja" style="left: 20%; width: 25px; height: 25px; animation-duration: 7s;"></span>
+        <span class="burbuja" style="left: 80%; width: 35px; height: 35px; animation-duration: 9s;"></span>
+        <span class="burbuja" style="left: 70%; width: 20px; height: 20px; animation-duration: 6s;"></span>
+        <span class="burbuja" style="left: 50%; width: 55px; height: 55px; animation-duration: 12s;"></span>
+        <span class="burbuja" style="left: 30%; width: 30px; height: 30px; animation-duration: 8s;"></span>
+    </div>
+
+    <!-- perfil -->
+    <div class="header">
+        <img src="FotoTiare.jpg" alt="Foto personal">
+        <h1>Tiare Parrao</h1>
+        <h2>Programadora Front End y desarrolladora en páginas web</h2>
+    </div>
+
+    <!-- Bloque para cualidades -->
+    <div class="cualidades">
+        <h2>Mis Cualidades</h2>
+        <div class="lista-cualidades">
+            <span>HTML</span>
+            <span>C#</span>
+            <span>Python</span>
+            <span>Front End</span>
+            <span>SQL server</span>
+        </div>
+    </div>
+
+    <!-- botones para proyectos -->
+    <div class="proyectos">
+        <h2>Mis Proyectos</h2>
+
+        <button class="btn-proyecto">Proyecto 1</button>
+        <button class="btn-proyecto">Proyecto 2</button>
+        <button class="btn-proyecto">Proyecto 3</button>
+    </div>
+
+    <!-- Sección final -->
+    <div class="footer">
+        <a class="btn-cv" href="CV_Tiare.pdf" download="Mi_CV">Descargar CV</a>
+
+        <div class="contacto">
+            <p>Email: tiare.parrao@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/tiare-parrao-silva-58797b39a/" target="_blank">Mi perfil en LinkedIn</a></p>
+            <p>Github: <a href="https://github.com/TiareParrao/" target="_blank">Mi perfil en Github</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
